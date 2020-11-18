@@ -1,55 +1,32 @@
 import {
+  Avatar,
   Link as ChakraLink,
+  Box,
+  Heading,
   Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
+  Icon,
+  Link,
 } from '@chakra-ui/core'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import {
+  FaLinkedin
+} from 'react-icons/fa';
 
-import { Hero } from '../components/Hero'
 import { Container } from '../components/Container'
-import { Main } from '../components/Main'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text>
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>typescript</Code>.
-      </Text>
-
-      <List spacing={3} my={0}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
-
+    <Avatar size="2xl" src="https://www.gravatar.com/avatar/15cb4683f9aa1f015998d230b61b0ef7?s=200" />
+    <Heading mt="3" size="3xl">Colin Hoernig</Heading>
+    <Text>
+      Tech Lead Manager, @<ChakraLink isExternal href="https://tackle.io">tackle.io</ChakraLink>
+    </Text>
+    <Box mt="2">
+      <Link href="https://www.linkedin.com/in/colinhoernig/" breakout isExternal>
+        <Icon as={FaLinkedin} w={6} h={6} />
+      </Link>
+    </Box>
     <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
   </Container>
 )
 

@@ -1,5 +1,5 @@
 {
-  "name": "with-chakra-ui-typescript",
+  "name": "ckhdotio-next",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -12,7 +12,8 @@
     "framer-motion": "^2.9.4",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {
     "@types/node": "^14.6.0",
