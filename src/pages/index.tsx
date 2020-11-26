@@ -1,33 +1,28 @@
-import {
-  Avatar,
-  Link as ChakraLink,
-  Box,
-  Heading,
-  Text,
-  Icon,
-  Link,
-} from '@chakra-ui/core'
-import {
-  FaLinkedin
-} from 'react-icons/fa';
-
-import { Container } from '../components/Container'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
+import SocialIconRow from "../components/SocialIconRow";
+import DarkModeSwitch from "../components/DarkModeSwitch";
 
 const Index = () => (
-  <Container height="100vh">
-    <Avatar size="2xl" src="https://www.gravatar.com/avatar/15cb4683f9aa1f015998d230b61b0ef7?s=200" />
-    <Heading mt="3" size="3xl">Colin Hoernig</Heading>
-    <Text>
-      Tech Lead Manager, @<ChakraLink isExternal href="https://tackle.io">tackle.io</ChakraLink>
-    </Text>
-    <Box mt="2">
-      <Link href="https://www.linkedin.com/in/colinhoernig/" breakout isExternal>
-        <Icon as={FaLinkedin} w={6} h={6} />
-      </Link>
-    </Box>
+  <div className="md:container md:mx-auto flex items-center justify-center text-gray-800 dark:text-gray-200">
+    <div className="min-h-screen py-6 flex flex-col align-center items-center justify-center sm:py-12">
+      <img
+        src="https://www.gravatar.com/avatar/15cb4683f9aa1f015998d230b61b0ef7?s=200"
+        className="rounded-full h-36 w-36 mb-6"
+      />
+      <h1 className="text-6xl font-sans">Colin Hoernig</h1>
+      <h2 className="text-xl">
+        Tech Lead Manager,{" "}
+        <a
+          href="https://tackle.io"
+          className="text-gray-800 dark:text-gray-200"
+        >
+          <span className="font-semibold">@</span>
+          <span className="border-b-2">tackle.io</span>
+        </a>
+      </h2>
+      <SocialIconRow />
+    </div>
     <DarkModeSwitch />
-  </Container>
-)
+  </div>
+);
 
-export default Index
+export default Index;

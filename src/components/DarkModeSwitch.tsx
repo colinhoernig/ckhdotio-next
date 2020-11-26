@@ -1,16 +1,32 @@
-import { useColorMode, Switch } from '@chakra-ui/core'
+import { useCallback, useEffect, useState } from "react";
 
-export const DarkModeSwitch = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-  const isDark = colorMode === 'dark'
+const DarkModeSwitch = () => {
+  const [active, setActive] = useState(false);
+
+  const toggleActive = useCallback(() => setActive((current) => !current), []);
+
+  useEffect(() => {
+    if (active) {
+      // @ts-ignore
+      document?.querySelector("html").classList.add("dark");
+    } else {
+      // @ts-ignore
+      document?.querySelector("html").classList.remove("dark");
+    }
+  }, [active]);
+
   return (
-    <Switch
-      position="fixed"
-      top="1rem"
-      right="1rem"
-      color="green"
-      isChecked={isDark}
-      onChange={toggleColorMode}
-    />
-  )
-}
+    <div
+      className="absolute top-0 right-0 mr-4 mt-4 w-12 h-8 flex items-center rounded-full p-1 bg-gray-800 dark:bg-gray-200"
+      onClick={toggleActive}
+    >
+      <div
+        className={`w-6 h-6 rounded-full shadow-sm duration-300 ease-in-out bg-gray-200 dark:bg-gray-800 ${
+          active && "transform translate-x-4"
+        }`}
+      />
+    </div>
+  );
+};
+
+export default DarkModeSwitch;
