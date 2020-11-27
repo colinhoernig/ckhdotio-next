@@ -1,19 +1,16 @@
 import { AppProps } from "next/app";
-import Head from "next/head";
+import Head from "../components/Head";
 import "../styles/index.css";
+
+const TITLE =
+  "ckhdotio - Colin Hoernig - musings of an engineering manager, developer, and tech enthusiast";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>
-          Colin Hoernig - Arvada, CO - Engineering Manager, Developer, Tech
-          Enthusiast
-        </title>
-        <meta
-          name="description"
-          content="ckhdotio - the personal homepage of Colin Hoernig, a software engineering manager at Tackle.io"
-        />
+        <title>{TITLE}</title>
+        <meta name="description" content={TITLE} />
       </Head>
       <Component {...pageProps} />
     </>

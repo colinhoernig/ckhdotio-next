@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-google-fonts": "^1.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0"
