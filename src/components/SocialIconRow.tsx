@@ -27,7 +27,7 @@ const SOCIAL_LINKS = {
 const SocialIconRow = () => (
   <div className="flex justify-center align-center space-x-4">
     {Object.values(SOCIAL_LINKS).map((social) => (
-      <a href={social.url} target="_blank">
+      <a href={social.url} target="_blank" key={social.service}>
         <span className="sr-only">
           {social.srPretext} {social.handle} on {social.service}
         </span>
