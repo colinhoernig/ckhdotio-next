@@ -8,7 +8,7 @@ const Index = () => (
       <Avatar />
       <h1 className="text-4xl md:text-6xl">Colin Hoernig</h1>
       <h2 className="text-lg md:text-3xl text-gray-600 dark:text-gray-400">
-        Tech Lead Manager,{" "}
+        Engineering Leader,{" "}
         <a href="https://tackle.io">
           <span className="font-semibold">@</span>
           <span className="border-b-2 border-gray-300">tackle.io</span>

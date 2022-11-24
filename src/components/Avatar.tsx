@@ -8,7 +8,6 @@ const Index = () => (
     <Image
       alt={"Headshot"}
       src={GRAVATAR_URL}
-      layout={"responsive"}
       loading="eager"
       width={150}
       height={150}

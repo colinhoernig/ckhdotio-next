@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const SOCIAL_LINKS = {
   github: {
@@ -7,13 +7,6 @@ const SOCIAL_LINKS = {
     handle: "@colinhoernig",
     srPretext: "View",
     icon: FaGithub,
-  },
-  twitter: {
-    service: "Twitter",
-    url: "https://twitter.com/colinhoernig",
-    handle: "@colinhoernig",
-    srPretext: "Follow",
-    icon: FaTwitter,
   },
   linkedin: {
     service: "LinkedIn",
