@@ -7,11 +7,9 @@ const DarkModeSwitch = () => {
 
   useEffect(() => {
     if (active) {
-      // @ts-ignore
-      document?.querySelector("html").classList.add("dark");
+      document?.querySelector("html")?.classList.add("dark");
     } else {
-      // @ts-ignore
-      document?.querySelector("html").classList.remove("dark");
+      document?.querySelector("html")?.classList.remove("dark");
     }
   }, [active]);
 

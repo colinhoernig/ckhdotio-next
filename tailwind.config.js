@@ -1,7 +1,12 @@
-const colors = require("tailwindcss/colors");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const colors = require('tailwindcss/colors')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.tsx", "./src/**/*.jsx"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -31,7 +36,7 @@ module.exports = {
 
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: colors.gray,
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,

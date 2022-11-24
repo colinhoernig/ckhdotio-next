@@ -13,7 +13,10 @@ const Index = () => (
       width={150}
       height={150}
       className="object-cover rounded-full"
-    />
+      style={{
+        maxWidth: "100%",
+        height: "auto"
+      }} />
   </div>
 );
 
