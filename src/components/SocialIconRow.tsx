@@ -18,7 +18,7 @@ const SOCIAL_LINKS = {
 };
 
 const SocialIconRow = () => (
-  <div className="flex justify-center align-center space-x-4">
+  <div className="flex space-x-4 justify-center md:justify-start">
     {Object.values(SOCIAL_LINKS).map((social) => (
       <a href={social.url} target="_blank" rel="noopener noreferrer" key={social.service}>
         <span className="sr-only">
